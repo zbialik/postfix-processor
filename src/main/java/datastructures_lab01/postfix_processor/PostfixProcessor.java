@@ -44,9 +44,9 @@ public class PostfixProcessor {
 		String inputFile = args[0];
 		String outputFile = args[1];
 
-		LOGGER.debug("User Inputs");
-		LOGGER.debug("Input File: " + inputFile);
-		LOGGER.debug("Output File: " + outputFile);
+		LOGGER.info("reading user inputs");
+		LOGGER.debug("input file: " + inputFile);
+		LOGGER.debug("output file: " + outputFile);
 
 		try {
 			inputReader = new FileReader(inputFile); // input file
