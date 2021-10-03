@@ -30,6 +30,13 @@ DV  TEMP3
 ST  TEMP4
 ```
 
-# Solution
+# Instructions
 
-TBD
+```
+git clone git@github.com:zbialik/postfix-processor.git
+cd postfix-processor
+mvn clean
+mvn compile
+mvn package
+java -cp target/postfix-processor-0.0.1-SNAPSHOT.jar datastructures_lab01.postfix_processor.PostfixProcessor src/test/resources/postfix-inputs.txt my-output.txt
+```
