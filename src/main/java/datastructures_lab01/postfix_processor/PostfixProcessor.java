@@ -251,7 +251,7 @@ public class PostfixProcessor {
 			return "ML";
 		} else if (operator == '/') {
 			return "DV";
-		} else if (operator == '$') {
+		} else if (operator == '$' || operator == '^') {
 			return "PW";
 		} else {
 			throw new Exception("the provided character is not a valid operator");
@@ -279,7 +279,7 @@ public class PostfixProcessor {
 	 * @return isOperator
 	 */
 	private static boolean isOperator(char c) {
-		if (c == '+' || c == '-' || c == '*' || c == '/' || c == '$') {
+		if (c == '+' || c == '-' || c == '*' || c == '/' || c == '$' || c == '^') {
 			return true;
 		} else {
 			return false;
