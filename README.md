@@ -55,12 +55,12 @@ The compiled code requires 2 input arguments:
 1. `inputFile` (relative or absolute path)
 2. `outputFile` (relative or absolute path)
 
-I have provided a test `inputFile` in `src/test/resources/postfix-inputs.txt`.
+I have provided 2 test input files: `inputs01.txt` and `inputs02.txt`.
 
 You can run the compiled code like so:
 
 ```
-java -cp target/postfix-processor-0.0.1-SNAPSHOT.jar datastructures_lab01.postfix_processor.PostfixProcessor src/test/resources/postfix-inputs.txt my-output.txt
+java -cp postfix-processor-0.0.1-SNAPSHOT.jar datastructures_lab01.postfix_processor.PostfixProcessor inputs01.txt output01.txt
 ```
 
 The output file will look similar to the following:
