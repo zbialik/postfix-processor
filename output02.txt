@@ -1,0 +1,57 @@
+---------------------------------------------
+ABC*+DE-/ as machine lang sequence:
+	LD	B
+	ML	C
+	ST	TEMP1
+	LD	A
+	AD	TEMP1
+	ST	TEMP2
+	LD	D
+	SB	E
+	ST	TEMP3
+	LD	TEMP2
+	DV	TEMP3
+	ST	TEMP4
+
+---------------------------------------------
+AB+C- as machine lang sequence:
+	LD	A
+	AD	B
+	ST	TEMP1
+	LD	TEMP1
+	SB	C
+	ST	TEMP2
+
+---------------------------------------------
+BAD is an INVALID postfix expression
+
+---------------------------------------------
+GOOD--- as machine lang sequence:
+	LD	O
+	SB	D
+	ST	TEMP1
+	LD	O
+	SB	TEMP1
+	ST	TEMP2
+	LD	G
+	SB	TEMP2
+	ST	TEMP3
+
+---------------------------------------------
+EXP^+ as machine lang sequence:
+	LD	X
+	PW	P
+	ST	TEMP1
+	LD	E
+	AD	TEMP1
+	ST	TEMP2
+
+---------------------------------------------
+AB-C- as machine lang sequence:
+	LD	A
+	SB	B
+	ST	TEMP1
+	LD	TEMP1
+	SB	C
+	ST	TEMP2
+

@@ -1,0 +1,6 @@
+A    B   C*+DE-/
+A B +C- 
+BAD
+GOOD---
+EXP^+
+AB-C-

@@ -1,5 +1,4 @@
-ABC*+DE-/
-A B +C- 
+AB+C- 
 ABC+-
 AB-C+DEF-+$
 ABCDE-+$*EF*-	
@@ -9,5 +8,3 @@ AB-*CBA+-*
 ABC-/BA-+/	
 ABC+$CBA-+*	
 AB0+/CBA+-/
-ABC+-D-A-q*
-AB^
