@@ -63,7 +63,7 @@ You can run the compiled code like so:
 java -cp target/postfix-processor-0.0.1-SNAPSHOT.jar datastructures_lab01.postfix_processor.PostfixProcessor src/test/resources/postfix-inputs.txt my-output.txt
 ```
 
-The output file will be written with the following format/layout:
+The output file will look similar to the following:
 
 ```
 ---------------------------------------------
@@ -91,33 +91,7 @@ AB+C- as machine lang sequence:
 	ST	TEMP2
 
 ---------------------------------------------
-ABC+- as machine lang sequence:
-	LD	B
-	AD	C
-	ST	TEMP1
-	LD	A
-	SB	TEMP1
-	ST	TEMP2
-
----------------------------------------------
-AB-C+DEF-+$ as machine lang sequence:
-	LD	A
-	SB	B
-	ST	TEMP1
-	LD	TEMP1
-	AD	C
-	ST	TEMP2
-	LD	E
-	SB	F
-	ST	TEMP3
-	LD	D
-	AD	TEMP3
-	ST	TEMP4
-	LD	TEMP2
-	PW	TEMP4
-	ST	TEMP5
-
----------------------------------------------
 ABC+/CBA*+ is an INVALID postfix expression
 ```
 
+NOTE: The output when processing `src/test/resources/postfix-inputs.txt` will be different than the above.
