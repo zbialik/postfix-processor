@@ -41,6 +41,12 @@ public class PostfixProcessor {
 	private static BufferedWriter outputWriter = null;
 
 	public static void main(String[] args) throws Exception {
+		
+		if (args.length != 2) {
+			String msg = "you must provide exactly 2 input args: inputFile and outputFile.";
+			throw new Exception(msg);
+		}
+		
 		String inputFile = args[0];
 		String outputFile = args[1];
 
