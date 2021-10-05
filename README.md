@@ -34,7 +34,9 @@ ST  TEMP4
 * Java 11
 * Maven v3.6.x
 
-# Run Instructions
+# Build Code
+
+You can compile the source code by executing the following:
 
 ```
 git clone git@github.com:zbialik/postfix-processor.git
@@ -42,5 +44,80 @@ cd postfix-processor
 mvn clean
 mvn compile
 mvn package
+```
+
+The compiled jar file will be located in `target/postfix-processor-0.0.1-SNAPSHOT.jar`
+
+
+# Run Compiled Code
+
+The compiled code requires 2 input arguments:
+1. `inputFile` (relative or absolute path)
+2. `outputFile` (relative or absolute path)
+
+I have provided a test `inputFile` in `src/test/resources/postfix-inputs.txt`.
+
+You can run the compiled code like so:
+
+```
 java -cp target/postfix-processor-0.0.1-SNAPSHOT.jar datastructures_lab01.postfix_processor.PostfixProcessor src/test/resources/postfix-inputs.txt my-output.txt
 ```
+
+The output file will be written with the following format/layout:
+
+```
+---------------------------------------------
+ABC*+DE-/ as machine lang sequence:
+	LD	B
+	ML	C
+	ST	TEMP1
+	LD	A
+	AD	TEMP1
+	ST	TEMP2
+	LD	D
+	SB	E
+	ST	TEMP3
+	LD	TEMP2
+	DV	TEMP3
+	ST	TEMP4
+
+---------------------------------------------
+AB+C- as machine lang sequence:
+	LD	A
+	AD	B
+	ST	TEMP1
+	LD	TEMP1
+	SB	C
+	ST	TEMP2
+
+---------------------------------------------
+ABC+- as machine lang sequence:
+	LD	B
+	AD	C
+	ST	TEMP1
+	LD	A
+	SB	TEMP1
+	ST	TEMP2
+
+---------------------------------------------
+AB-C+DEF-+$ as machine lang sequence:
+	LD	A
+	SB	B
+	ST	TEMP1
+	LD	TEMP1
+	AD	C
+	ST	TEMP2
+	LD	E
+	SB	F
+	ST	TEMP3
+	LD	D
+	AD	TEMP3
+	ST	TEMP4
+	LD	TEMP2
+	PW	TEMP4
+	ST	TEMP5
+
+---------------------------------------------
+ABC+/CBA*+ is an INVALID postfix expression
+```
+
