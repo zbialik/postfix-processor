@@ -30,7 +30,11 @@ DV  TEMP3
 ST  TEMP4
 ```
 
-# Instructions
+# Pre-Reqs
+* Java 11
+* Maven v3.6.x
+
+# Run Instructions
 
 ```
 git clone git@github.com:zbialik/postfix-processor.git
